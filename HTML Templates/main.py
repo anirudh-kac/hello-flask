@@ -10,6 +10,10 @@ def home():
 def about():
     return render_template("about.html",name = "Fun",services = ["Jokes","Sarcasm","Memes"])
 
+@app.route("/<user_name>")
+def user(user_name):
+    return render_template("user.html",user = user_name)
+
 if __name__ == "__main__":
     app.run()
 
